@@ -308,3 +308,47 @@ h3 {
     padding: 20px 0 60px;
   }
 }
+
+/* ---------- 404 Page ---------- */
+
+.error-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.error-container {
+  max-width: 600px;
+}
+
+.error-container h1 {
+  margin: 20px 0 16px;
+  font-size: 48px;
+  line-height: 1.1;
+  color: var(--navy);
+}
+
+.error-container p:not(.eyebrow) {
+  margin: 0 auto 28px;
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.error-button {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.error-button:hover {
+  opacity: 0.85;
+}
