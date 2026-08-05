@@ -65,7 +65,7 @@ h3 {
 .hero {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -86,9 +86,9 @@ h3 {
 }
 
 .hero-title {
-  max-width: 800px;
+  max-width: 600px;
   font-family: "Archivo Black", sans-serif;
-  font-size: 40px;
+  font-size: 46px;
   font-weight: 800;
   line-height: 1.15;
   color: #ffffff;
@@ -105,9 +105,9 @@ h3 {
 }
 
 .hero-subtitle {
-  max-width: 600px;
+  max-width: 480px;
   font-family: "Alice", serif;
-  font-size: 25px;
+  font-size: 19px;
   line-height: 1.6;
   color: #f1f3f6;
   margin: 0;
@@ -279,16 +279,42 @@ h3 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
+  .hero {
+    aspect-ratio: 4 / 5;
+    min-height: 0;
+    background-position: center center;
+  }
+
+  .hero-inner {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .hero-title {
+    max-width: 80%;
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  .hero-title .below {
+    font-size: 42px;
+  }
+
+  .hero-subtitle {
+    max-width: 70%;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
   .about-grid {
     grid-template-columns: 1fr;
   }
-  .hero-title {
-    font-size: 34px;
-  }
+
   .destinations-grid {
     grid-template-columns: 1fr;
     max-width: 420px;
   }
+
   .section-title {
     font-size: 26px;
   }
@@ -296,16 +322,26 @@ h3 {
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 520px;
+    aspect-ratio: 3 / 4;
   }
+
+  .hero-inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .hero-title {
-    font-size: 28px;
+    max-width: 85%;
+    font-size: 20px;
   }
-  .about {
-    padding: 60px 0;
+
+  .hero-title .below {
+    font-size: 40px;
   }
-  .destinations {
-    padding: 20px 0 60px;
+
+  .hero-subtitle {
+    max-width: 75%;
+    font-size: 15px;
   }
 }
 
