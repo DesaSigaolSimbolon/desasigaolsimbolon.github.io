@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ site.description }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+  </head>
+  <body>
+    {{ content }}
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; {{ 'now' | date: "%Y" }} Desa Wisata {{ site.village.name }}.
+          Dibuat dengan Jekyll.
+        </p>
+      </div>
+    </footer>
+
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+</html>

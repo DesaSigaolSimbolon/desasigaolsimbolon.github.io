@@ -1,0 +1,99 @@
+---
+layout: default
+title: "Desa Wisata Sigaol Simbolon"
+---
+
+<section class="hero" style="background-image: linear-gradient(180deg, rgba(10,20,35,0.55) 0%, rgba(10,20,35,0.35) 45%, rgba(10,20,35,0.65) 100%), url('{{ "/assets/images/hero.jpg" | relative_url }}');">
+  <div class="container hero-inner">
+    <p class="eyebrow eyebrow-light">DESA WISATA</p>
+    <h1 class="hero-title">
+      Selamat Datang di<br>
+      Desa <span class="highlight">Sigaol Simbolon</span>
+    </h1>
+    <p class="hero-subtitle">
+      Desa wisata yang kaya akan budaya batak, keindahan alam danau toba,
+      agrowisata nenas khas Sigaol Simbolon
+    </p>
+  </div>
+</section>
+
+<section class="about" id="tentang">
+  <div class="container about-grid">
+    <div class="about-text">
+      <p class="eyebrow">TENTANG DESA</p>
+      <h2 class="about-heading">Mengenal</h2>
+      <h2 class="about-heading about-heading-accent">Desa {{ site.village.name }}</h2>
+      <p class="about-body">
+        Desa Wisata {{ site.village.name }} merupakan salah satu desa yang berada di
+        Kecamatan {{ site.village.kecamatan }}, Kabupaten {{ site.village.kabupaten }}. Desa ini ditetapkan sebagai Desa
+        Wisata melalui {{ site.village.sk }}
+        tentang Penetapan Desa Wisata di Kabupaten {{ site.village.kabupaten }}. Berbagai potensi
+        wisata yang dimiliki desa ini meliputi Pemandian Air Panas, kuliner
+        tradisional Ayam Napinadar, Agrowisata Nenas, serta Agrowisata
+        Persawahan Emeni Simbolon yang menjadi salah satu kawasan
+        penghasil padi di Kabupaten {{ site.village.kabupaten }}.
+      </p>
+    </div>
+
+    <div class="stats-card">
+      <div class="stat-row">
+        <span class="stat-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M14.5 14.3c2.6.4 4.5 2.5 4.5 5.7"/></svg>
+        </span>
+        <div class="stat-text">
+          <strong>{{ site.village.penduduk }}</strong>
+          <span>Penduduk</span>
+        </div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2c4 3 6 6.5 6 10a6 6 0 1 1-12 0c0-3.5 2-7 6-10Z"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <div class="stat-text">
+          <strong>{{ site.village.luas_wilayah }}</strong>
+          <span>Luas Wilayah</span>
+        </div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20 11 5l3 6 2-2.5L20 20Z"/></svg>
+        </span>
+        <div class="stat-text">
+          <strong>{{ site.village.ketinggian }} <span class="unit">mdpl</span></strong>
+          <span>Ketinggian</span>
+        </div>
+      </div>
+      <div class="stat-row">
+        <span class="stat-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+        </span>
+        <div class="stat-text">
+          <strong>{{ site.village.kabupaten }}</strong>
+          <span>Prov. {{ site.village.provinsi }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="destinations" id="destinasi">
+  <div class="container">
+    <div class="destinations-heading">
+      <p class="eyebrow eyebrow-center">UNCOVER PLACE</p>
+      <h2 class="section-title">POPULAR DESTINATION</h2>
+      <p class="section-subtitle">
+        Jelajahi keindahan Desa {{ site.village.name }} melalui beragam destinasi wisata yang
+        memadukan pesona alam, budaya lokal, dan pengalaman yang tak terlupakan
+      </p>
+    </div>
+
+    <div class="destinations-grid">
+      {% for dest in site.destinations %}
+      <div class="destination-card">
+        <img src="{{ dest.image | relative_url }}" alt="{{ dest.title }}" loading="lazy">
+        <span class="destination-label">{{ dest.title }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
