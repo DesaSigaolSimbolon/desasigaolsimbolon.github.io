@@ -11,22 +11,13 @@
   --max-width: 1180px;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family:
-    "Poppins",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   color: var(--navy);
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
@@ -38,11 +29,7 @@ body {
   padding: 0 24px;
 }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-}
+h1, h2, h3 { margin: 0; }
 
 .eyebrow {
   font-size: 13px;
@@ -52,9 +39,7 @@ h3 {
   margin: 0 0 12px;
 }
 
-.eyebrow-light {
-  color: #ffffff;
-}
+.eyebrow-light { color: #ffffff; }
 
 .eyebrow-center {
   text-align: center;
@@ -82,15 +67,13 @@ h3 {
   line-height: 1.15;
   color: #ffffff;
   margin-bottom: 22px;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 18px rgba(0,0,0,0.25);
 }
 
-.hero-title .highlight {
-  color: var(--gold);
-}
+.hero-title .highlight { color: var(--gold); }
 
 .hero-subtitle {
-  font-family: "Lora", serif;
+  font-family: 'Lora', serif;
   font-style: italic;
   font-size: 17px;
   line-height: 1.6;
@@ -143,9 +126,7 @@ h3 {
   border-bottom: 1px solid var(--border-soft);
 }
 
-.stat-row:last-child {
-  border-bottom: none;
-}
+.stat-row:last-child { border-bottom: none; }
 
 .stat-icon {
   color: var(--navy);
@@ -244,7 +225,7 @@ h3 {
   padding: 10px 24px;
   border-radius: 999px;
   white-space: nowrap;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 /* ---------- Footer ---------- */
@@ -262,32 +243,15 @@ h3 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero-title {
-    font-size: 34px;
-  }
-  .destinations-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-  }
-  .section-title {
-    font-size: 26px;
-  }
+  .about-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 34px; }
+  .destinations-grid { grid-template-columns: 1fr; max-width: 420px; }
+  .section-title { font-size: 26px; }
 }
 
 @media (max-width: 480px) {
-  .hero {
-    min-height: 520px;
-  }
-  .hero-title {
-    font-size: 28px;
-  }
-  .about {
-    padding: 60px 0;
-  }
-  .destinations {
-    padding: 20px 0 60px;
-  }
+  .hero { min-height: 520px; }
+  .hero-title { font-size: 28px; }
+  .about { padding: 60px 0; }
+  .destinations { padding: 20px 0 60px; }
 }
