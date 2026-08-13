@@ -1,0 +1,191 @@
+/* ---------- Header ---------- */
+
+.site-header {
+  width: 100%;
+  height: 72px;
+  background: $navy;
+
+  .header-container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* ---------- Brand ---------- */
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+
+  color: white;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-logo,
+.logo-placeholder {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.logo-placeholder {
+  border-radius: 50%;
+  background: white;
+}
+
+.site-name {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* ---------- Navigation ---------- */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  a {
+    position: relative;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 15px;
+    padding: 8px 0;
+
+    transition:
+      opacity 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &.active {
+      color: $gold;
+    }
+  }
+}
+
+/* ---------- Hamburger ---------- */
+
+.nav-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+
+    background: white;
+    border-radius: 2px;
+
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+}
+
+/* =========================================================
+   Tablet / Mobile
+   ========================================================= */
+
+@media (max-width: 860px) {
+  .site-header {
+    height: auto;
+
+    .header-container {
+      min-height: 72px;
+      height: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .site-brand {
+    gap: 18px;
+  }
+
+  .site-logo,
+  .logo-placeholder {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Show hamburger */
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Hide navigation by default */
+
+  .site-nav {
+    display: none;
+  }
+
+  /*
+   * When JavaScript adds .is-open to the header,
+   * show the navigation.
+   */
+
+  .site-header.is-open {
+    .site-nav {
+      display: flex;
+    }
+  }
+}
+
+/* =========================================================
+   Mobile navigation layout
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .site-header {
+    .header-container {
+      position: relative;
+      flex-wrap: wrap;
+    }
+  }
+
+  .site-nav {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    padding: 12px 0 8px;
+
+    a {
+      width: 100%;
+      padding: 12px 0;
+
+      font-size: 14px;
+    }
+  }
+}

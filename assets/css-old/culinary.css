@@ -54,7 +54,7 @@
   font-family: "Archivo Black", sans-serif;
   font-size: 34px;
   line-height: 1.12;
-  color: var(--navy);
+  color: $navy;
   margin: 0 0 22px;
 }
 

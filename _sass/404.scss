@@ -2,42 +2,50 @@
 
 .error-page {
   min-height: calc(100vh - 80px);
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-align: center;
 }
 
 .error-container {
   max-width: 600px;
-}
 
-.error-container h1 {
-  margin: 20px 0 16px;
-  font-size: 48px;
-  line-height: 1.1;
-  color: var(--navy);
-}
+  h1 {
+    margin: 20px 0 16px;
 
-.error-container p:not(.eyebrow) {
-  margin: 0 auto 28px;
-  color: black;
-  font-size: 16px;
-  line-height: 1.7;
+    font-size: 48px;
+    line-height: 1.1;
+    color: $navy;
+  }
+
+  p:not(.eyebrow) {
+    margin: 0 auto 28px;
+
+    color: black;
+    font-size: 16px;
+    line-height: 1.7;
+  }
 }
 
 .error-button {
   display: inline-block;
+
   padding: 12px 24px;
   border-radius: 999px;
-  background: var(--navy);
+
+  background: $navy;
   color: white;
+
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  transition: opacity 0.2s ease;
-}
 
-.error-button:hover {
-  opacity: 0.85;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
 }

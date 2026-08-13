@@ -1,0 +1,33 @@
+.about {
+  padding: 90px 0;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+
+    @media (max-width: 860px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &-heading {
+    color: black;
+    font-size: 30px;
+    line-height: 1.25;
+
+    &-accent {
+      font-size: 40px;
+      color: $navy;
+      margin-bottom: 22px;
+    }
+  }
+
+  &-body {
+    font-size: 15.5px;
+    line-height: 1.9;
+    color: black;
+    text-align: justify;
+  }
+}

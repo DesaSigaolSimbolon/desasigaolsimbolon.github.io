@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Desa Wisata Sigaol Simbolon"
-stylesheet: home
 ---
 
 <section
@@ -9,7 +8,7 @@ stylesheet: home
   style="--hero-image: url('{{ '/assets/images/hero.jpg' | relative_url }}')"
 >
   <div class="container hero-inner">
-    <p class="eyebrow eyebrow-light montserrat-regular w700">DESA WISATA</p>
+    <p class="eyebrow eyebrow-light montserrat-bold">DESA WISATA</p>
     <h1 class="hero-title archivo-black-regular">
       Selamat Datang di<br />
       <span class="below"
@@ -27,8 +26,8 @@ stylesheet: home
   <div class="container about-grid">
     <div class="about-text">
       <p class="eyebrow archivo-black-regular">TENTANG DESA</p>
-      <h2 class="about-heading league-spartan-regular">Mengenal</h2>
-      <h2 class="about-heading about-heading-accent league-spartan-regular">
+      <h2 class="about-heading league-spartan-bold">Mengenal</h2>
+      <h2 class="about-heading about-heading-accent league-spartan-bold">
         Desa {{ site.data.village.name }}
       </h2>
       <p class="about-body">
@@ -177,8 +176,8 @@ stylesheet: home
 <section class="destinations" id="destinasi">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow eyebrow-center exo-2-regular w700">UNCOVER PLACE</p>
-      <h2 class="section-title atkinson-hyperlegible-regular w700">
+      <p class="eyebrow eyebrow-center exo-bold">UNCOVER PLACE</p>
+      <h2 class="section-title atkinson-hyperlegible-bold">
         DESTINASI POPULER
       </h2>
       <p class="section-subtitle inria-serif-regular">
@@ -196,9 +195,7 @@ stylesheet: home
           alt="{{ dest.title }}"
           loading="lazy"
         />
-        <span class="destination-label exo-2-regular w700"
-          >{{ dest.title }}</span
-        >
+        <span class="destination-label exo-bold">{{ dest.title }}</span>
       </div>
       {% endfor %}
     </div>
