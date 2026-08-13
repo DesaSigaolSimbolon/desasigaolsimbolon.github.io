@@ -5,17 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ site.description }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/header.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/footer.css' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/fonts.css' | relative_url }}"
+    />
+
+    {% if page.stylesheet %}
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/' | append: page.stylesheet | append: '.css' | relative_url }}"
+    />
+    {% endif %}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo+Black&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alice&family=Archivo+Black&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=League+Spartan:wght@100..900&family=Lora&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
       rel="stylesheet"
     />
 
@@ -24,8 +39,59 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
   </head>
+
   <body>
-    {{ content }}
+    <header class="site-header">
+      <div class="header-container">
+        <a href="{{ '/' | relative_url }}" class="site-brand">
+          <img
+            class="site-logo"
+            src="{{ '/assets/images/logo.png' | relative_url }}"
+            alt="Logo Desa Sigaol Simbolon"
+          />
+          <span class="site-name">Desa Sigaol Simbolon</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navigasi utama">
+          <a
+            href="{{ '/' | relative_url }}"
+            class="{% if page.url == '/' %}active{% endif %}"
+          >
+            Beranda
+          </a>
+
+          <a
+            href="{{ '/wisata.html' | relative_url }}"
+            class="{% if page.url == '/wisata.html' %}active{% endif %}"
+          >
+            Wisata
+          </a>
+
+          <a
+            href="{{ '/penginapan.html' | relative_url }}"
+            class="{% if page.url == '/penginapan.html' %}active{% endif %}"
+          >
+            Penginapan
+          </a>
+
+          <a
+            href="{{ '/kuliner.html' | relative_url }}"
+            class="{% if page.url == '/kuliner.html' %}active{% endif %}"
+          >
+            Kuliner
+          </a>
+
+          <a
+            href="{{ '/galeri.html' | relative_url }}"
+            class="{% if page.url == '/galeri.html' %}active{% endif %}"
+          >
+            Galeri
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>{{ content }}</main>
 
     <footer class="site-footer">
       <div class="container footer-inner">

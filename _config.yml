@@ -1,37 +1,10 @@
+# Configuration file for Jekyll
 title: Desa Wisata Sigaol Simbolon
 description: >-
   Desa wisata yang kaya akan budaya batak, keindahan alam danau toba,
   agrowisata nenas khas Sigaol Simbolon.
 baseurl: ""
 url: "https://desasigaolsimbolon.github.io"
-
-# Village stats & meta info (edit these freely)
-village:
-  name: "Sigaol Simbolon"
-  kecamatan: "Palipi"
-  kabupaten: "Samosir"
-  provinsi: "Sumatera Utara"
-  penduduk: "1.486+"
-  luas_wilayah: "6,85 km²"
-  ketinggian: "± 900"
-  sk: "Keputusan Bupati Samosir Nomor 77 Tahun 2022"
-
-destinations:
-  - title: "Danau Sampean"
-    image: /assets/images/danau-sampean.jpg
-    description: "Tebing hijau menghadap perairan tenang, tempat sempurna menikmati panorama danau di sore hari."
-  - title: "Wisata Sawah"
-    image: /assets/images/wisata-sawah.jpg
-    description: "Hamparan sawah hijau dengan latar pegunungan, suasana khas pedesaan Samosir."
-  - title: "Agrowisata Nenas"
-    image: /assets/images/agrowisata-nenas.jpg
-    description: "Kebun nenas khas Sigaol Simbolon dengan pemandangan pegunungan dan danau di kejauhan."
-  - title: "Pemandian Air Panas"
-    image: /assets/images/pemandian-air-panas.jpg
-    description: "Sumber air panas alami di antara bebatuan, cocok untuk relaksasi setelah menjelajah desa."
-  - title: "Voli Sampean"
-    image: /assets/images/voli-sampean.jpg
-    description: "Lapangan voli terbuka dengan panorama danau dan pegunungan, tempat warga berkumpul dan berolahraga."
 
 plugins:
   - jekyll-feed
