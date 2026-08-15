@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Kuliner — Desa Sigaol Simbolon"
-permalink: /kuliner.html
+permalink: /culinary.html
 ---
 
 <section class="culinary" id="kuliner">
@@ -22,8 +22,8 @@ permalink: /kuliner.html
       <article class="culinary-card">
         <div class="culinary-image">
           <img
-            src="{{ place.image | relative_url }}"
-            alt="{{ place.alt }}"
+            src="{{ '/assets/images/culinary/' | append: place.image | append: '.jpg' | relative_url }}"
+            alt="{{ place.name }}"
             loading="lazy"
           />
         </div>
