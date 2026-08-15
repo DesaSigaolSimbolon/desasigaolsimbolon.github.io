@@ -55,10 +55,17 @@ permalink: /culinary.html
           <div class="culinary-card-footer">
             <a
               href="{{ 'https://www.instagram.com/' | append: place.social }}"
-              class="culinary-detail-button"
+              class="culinary-detail-button arimo-regular"
             >
-              <span class="arimo-regular" aria-hidden="true">◎</span>
+              <span aria-hidden="true">
+                <img
+                  src="{{ '/assets/images/icons/instagram.svg' | relative_url }}"
+                  alt="instagram"
+                />
+              </span>
+
               Lihat Detail
+
               <strong aria-hidden="true">→</strong>
             </a>
 
