@@ -4,7 +4,7 @@
   padding: 40px 0 100px;
 }
 
-/* ---------- Culinary Cards ---------- */
+/* ---------- Culinary List ---------- */
 
 .culinary-list {
   display: flex;
@@ -14,35 +14,55 @@
   margin: 0 auto;
 }
 
+/* ---------- Culinary Card ---------- */
+
 .culinary-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 410px;
 
   overflow: hidden;
-  border-radius: var(--radius-lg);
+  border-radius: $radius-lg;
 
-  background: #f5f9fd;
+  background: #f7fbff;
+
+  &:nth-child(even) {
+    grid-template-columns: 1fr 1fr;
+
+    .culinary-image {
+      order: 2;
+    }
+
+    .culinary-content {
+      order: 1;
+    }
+  }
 }
 
-.culinary-card-image {
+/* ---------- Culinary Image ---------- */
+
+.culinary-image {
   min-height: 410px;
   overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
 }
 
-.culinary-card-image img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.culinary-card:hover {
+  .culinary-image img {
+    transform: scale(1.03);
+  }
 }
 
-.culinary-card:hover .culinary-card-image img {
-  transform: scale(1.03);
-}
+/* ---------- Culinary Content ---------- */
 
-.culinary-card-content {
+.culinary-content {
   padding: 42px 40px;
 
   display: flex;
@@ -51,7 +71,6 @@
 }
 
 .culinary-card-title {
-  font-family: "Archivo Black", sans-serif;
   font-size: 34px;
   line-height: 1.12;
   color: $navy;
@@ -59,10 +78,9 @@
 }
 
 .culinary-card-description {
-  font-family: "Lora", serif;
   font-size: 16px;
   line-height: 1.55;
-  color: #666;
+  color: #505050;
   margin: 0 0 24px;
 }
 
@@ -76,53 +94,65 @@
   padding: 14px 12px;
   margin-bottom: 18px;
 
-  background: #c7def1;
+  background: #c4daec;
   border-radius: 22px;
 }
 
 .culinary-feature {
   min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   text-align: center;
 }
 
 .culinary-feature-icon {
   width: 34px;
   height: 34px;
+
   margin: 0 auto 5px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #0f4b7f;
-}
+  flex-shrink: 0;
 
-.culinary-feature-icon svg {
-  width: 28px;
-  height: 28px;
+  img {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
 }
 
 .culinary-feature-text {
   display: block;
-  font-family: "Lora", serif;
-  font-size: 9px;
+
+  font-size: 10px;
   line-height: 1.25;
-  color: #174c78;
+
+  color: $navy;
 }
 
-/* ---------- Culinary Footer Row ---------- */
+/* ---------- Culinary Footer ---------- */
 
 .culinary-card-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 16px;
+
+  width: 100%;
 }
 
 .culinary-detail-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
   min-width: 160px;
@@ -130,57 +160,37 @@
 
   border-radius: 999px;
 
-  background: #073f72;
+  background: $navy;
   color: #ffffff;
 
   text-decoration: none;
+
   font-size: 14px;
-  font-weight: 600;
 
   transition:
     background 0.2s ease,
     transform 0.2s ease;
-}
 
-.culinary-detail-button:hover {
-  background: #0f2a4a;
-  transform: translateY(-1px);
+  &:hover {
+    background: $navy;
+    transform: translateY(-1px);
+  }
 }
 
 .culinary-social {
-  color: #0b477c;
+  margin-left: auto;
+
+  color: $navy;
   font-size: 12px;
-  font-weight: 700;
+
   white-space: nowrap;
-}
-
-/* ---------- Alternate Card ---------- */
-
-.culinary-card:nth-child(even) {
-  grid-template-columns: 1fr 1fr;
-}
-
-.culinary-card:nth-child(even) .culinary-card-image {
-  order: 2;
-}
-
-.culinary-card:nth-child(even) .culinary-card-content {
-  order: 1;
 }
 
 /* ---------- Culinary Responsive ---------- */
 
 @media (max-width: 860px) {
-  .culinary-page {
+  .culinary {
     padding: 55px 0 80px;
-  }
-
-  .culinary-heading {
-    margin-bottom: 45px;
-  }
-
-  .culinary-title {
-    font-size: 32px;
   }
 
   .culinary-list {
@@ -190,19 +200,17 @@
   .culinary-card,
   .culinary-card:nth-child(even) {
     grid-template-columns: 1fr;
-  }
 
-  .culinary-card-image,
-  .culinary-card:nth-child(even) .culinary-card-image {
-    order: 1;
-    min-height: 300px;
-    height: 300px;
-  }
+    .culinary-image {
+      order: 1;
+      min-height: 300px;
+      height: 300px;
+    }
 
-  .culinary-card-content,
-  .culinary-card:nth-child(even) .culinary-card-content {
-    order: 2;
-    padding: 30px 28px;
+    .culinary-content {
+      order: 2;
+      padding: 30px 28px;
+    }
   }
 
   .culinary-card-title {
@@ -211,30 +219,18 @@
 }
 
 @media (max-width: 480px) {
-  .culinary-page {
+  .culinary {
     padding: 45px 0 60px;
   }
 
-  .culinary-heading {
-    margin-bottom: 35px;
-  }
-
-  .culinary-title {
-    font-size: 28px;
-  }
-
-  .culinary-subtitle {
-    font-size: 15px;
-  }
-
-  .culinary-card-image,
-  .culinary-card:nth-child(even) .culinary-card-image {
+  .culinary-image,
+  .culinary-card:nth-child(even) .culinary-image {
     height: 250px;
     min-height: 250px;
   }
 
-  .culinary-card-content,
-  .culinary-card:nth-child(even) .culinary-card-content {
+  .culinary-content,
+  .culinary-card:nth-child(even) .culinary-content {
     padding: 25px 20px;
   }
 
@@ -256,11 +252,16 @@
   }
 
   .culinary-card-footer {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .culinary-detail-button {
+    min-width: 0;
   }
 
   .culinary-social {
     font-size: 11px;
+    text-align: right;
   }
 }

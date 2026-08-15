@@ -7,175 +7,68 @@ permalink: /kuliner.html
 <section class="culinary" id="kuliner">
   <div class="container">
     <header class="section-heading">
-      <p class="eyebrow eyebrow-center">CULINARY</p>
+      <p class="eyebrow eyebrow-center exo-bold">CULINARY</p>
 
-      <h1 class="section-title">KULINER</h1>
+      <h1 class="section-title atkinson-hyperlegible-bold">KULINER</h1>
 
-      <p class="section-subtitle">
+      <p class="section-subtitle inria-serif-regular">
         Temukan berbagai hidangan khas dan cita rasa lokal yang melengkapi
         pengalaman berwisata di Sigaol Simbolon
       </p>
     </header>
 
     <div class="culinary-list">
-      <!-- Rumah Makan Nasional Sinurat -->
+      {% for place in site.data.culinary %}
       <article class="culinary-card">
         <div class="culinary-image">
           <img
-            src="{{ '/assets/images/kuliner/sinurat.jpg' | relative_url }}"
-            alt="Rumah Makan Nasional Sinurat"
+            src="{{ place.image | relative_url }}"
+            alt="{{ place.alt }}"
             loading="lazy"
           />
         </div>
 
         <div class="culinary-content">
-          <h2>RUMAH MAKAN<br />NASIONAL SINURAT</h2>
+          <h2 class="culinary-card-title lora-bold">{{ place.name }}</h2>
 
-          <p class="culinary-description">
-            Nikmati berbagai hidangan lezat dengan cita rasa tradisional dan
-            modern, disajikan dengan suasana hangat serta pemandangan Danau Toba
-            yang menawan.
+          <p class="culinary-card-description inria-serif-regular">
+            {{ place.description }}
           </p>
 
           <div class="culinary-features">
+            {% for feature in place.features %}
             <div class="culinary-feature">
-              <span class="feature-icon">🍴</span>
-              <span>Menu Khas<br />Batak</span>
-            </div>
+              <span class="culinary-feature-icon" aria-hidden="true">
+                <img
+                  src="{{ '/assets/images/icons/' | append: feature.icon | append: '.svg' | relative_url }}"
+                  alt="{{ feature.text }}"
+                />
+              </span>
 
-            <div class="culinary-feature">
-              <span class="feature-icon">♧</span>
-              <span>Pelayanan<br />ramah dan cepat</span>
+              <span class="culinary-feature-text inria-serif-regular">
+                {{ feature.text }}
+              </span>
             </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">⌁</span>
-              <span>View danau<br />Toba</span>
-            </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">♧</span>
-              <span>Cocok untuk<br />keluarga dan grup</span>
-            </div>
+            {% endfor %}
           </div>
 
-          <div class="culinary-footer">
-            <a href="#" class="culinary-button">
-              <span>◎</span>
+          <div class="culinary-card-footer">
+            <a
+              href="{{ 'https://www.instagram.com/' | append: place.social }}"
+              class="culinary-detail-button"
+            >
+              <span class="arimo-regular" aria-hidden="true">◎</span>
               Lihat Detail
-              <strong>→</strong>
+              <strong aria-hidden="true">→</strong>
             </a>
 
-            <span class="culinary-social"> @sampeanuli_restaurant </span>
+            <span class="culinary-social arimo-regular">
+              {{ '@' | append: place.social }}
+            </span>
           </div>
         </div>
       </article>
-
-      <!-- Sampean Nauli -->
-      <article class="culinary-card">
-        <div class="culinary-image">
-          <img
-            src="{{ '/assets/images/kuliner/sampean-nauli.jpg' | relative_url }}"
-            alt="Sampean Nauli"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="culinary-content">
-          <h2>SAMPEAN<br />NAULI</h2>
-
-          <p class="culinary-description">
-            Sajian hidangan khas dengan cita rasa autentik yang menggugah
-            selera, disajikan dalam suasana nyaman dan ramah untuk semua
-            kalangan dengan pemandangan yang luar biasa.
-          </p>
-
-          <div class="culinary-features">
-            <div class="culinary-feature">
-              <span class="feature-icon">♨</span>
-              <span>Aneka<br />hidangan lezat</span>
-            </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">♨</span>
-              <span>Suasana<br />nyaman dan hangat</span>
-            </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">⌁</span>
-              <span>View danau<br />Toba</span>
-            </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">▣</span>
-              <span>Spot foto<br />instagramable</span>
-            </div>
-          </div>
-
-          <div class="culinary-footer">
-            <a href="#" class="culinary-button">
-              <span>◎</span>
-              Lihat Detail
-              <strong>→</strong>
-            </a>
-
-            <span class="culinary-social"> @sampeanuli_restaurant </span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Jamar's Point -->
-      <article class="culinary-card">
-        <div class="culinary-image">
-          <img
-            src="{{ '/assets/images/kuliner/jamars-point.jpg' | relative_url }}"
-            alt="Jamar's Point Sampean"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="culinary-content">
-          <h2>JAMAR'S POINT<br />SAMPEAN</h2>
-
-          <p class="culinary-description">
-            Tempat terbaik untuk pecinta pizza! Nikmati pizza dengan berbagai
-            pilihan topping, hidangan lezat lainnya, dan minuman segar dalam
-            suasana casual yang seru.
-          </p>
-
-          <div class="culinary-features">
-            <div class="culinary-feature">
-              <span class="feature-icon">🍕</span>
-              <span>Pizza dengan<br />berbagai pilihan</span>
-            </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">♧</span>
-              <span>Pelayanan<br />ramah dan cepat</span>
-            </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">⌁</span>
-              <span>View danau<br />Toba</span>
-            </div>
-
-            <div class="culinary-feature">
-              <span class="feature-icon">▣</span>
-              <span>Spot foto<br />instagramable</span>
-            </div>
-          </div>
-
-          <div class="culinary-footer">
-            <a href="#" class="culinary-button">
-              <span>◎</span>
-              Lihat Detail
-              <strong>→</strong>
-            </a>
-
-            <span class="culinary-social"> @jamarspoint_samosir </span>
-          </div>
-        </div>
-      </article>
+      {% endfor %}
     </div>
   </div>
 </section>

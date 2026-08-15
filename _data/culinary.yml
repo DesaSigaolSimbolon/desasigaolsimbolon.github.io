@@ -1,0 +1,53 @@
+- name: "RUMAH MAKAN NASIONAL SINURAT"
+  image: "/assets/images/culinary/sinurat.jpg"
+  alt: "Rumah Makan Nasional Sinurat"
+  description: >
+    Nikmati berbagai hidangan lezat dengan cita rasa tradisional dan
+    modern, disajikan dengan suasana hangat serta pemandangan Danau Toba
+    yang menawan.
+  social: "sampeanuli_restaurant"
+  features:
+    - icon: "menu"
+      text: "Menu Khas<br>Batak"
+    - icon: "service"
+      text: "Pelayanan<br>ramah dan cepat"
+    - icon: "view"
+      text: "View danau<br>Toba"
+    - icon: "family"
+      text: "Cocok untuk<br>keluarga dan grup"
+
+- name: "SAMPEAN NAULI"
+  image: "/assets/images/culinary/sampean-nauli.jpg"
+  alt: "Sampean Nauli"
+  description: >
+    Sajian hidangan khas dengan cita rasa autentik yang menggugah
+    selera, disajikan dalam suasana nyaman dan ramah untuk semua
+    kalangan dengan pemandangan yang luar biasa.
+  social: "sampeanuli_restaurant"
+  features:
+    - icon: "food-cover"
+      text: "Aneka<br>hidangan lezat"
+    - icon: "ambience"
+      text: "Suasana<br>nyaman dan hangat"
+    - icon: "view"
+      text: "View danau<br>Toba"
+    - icon: "camera"
+      text: "Spot foto<br>instagramable"
+
+- name: "JAMAR'S POINT SAMPEAN"
+  image: "/assets/images/culinary/jamars-point.jpg"
+  alt: "Jamar's Point Sampean"
+  description: >
+    Tempat terbaik untuk pecinta pizza! Nikmati pizza dengan berbagai
+    pilihan topping, hidangan lezat lainnya, dan minuman segar dalam
+    suasana casual yang seru.
+  social: "jamarspoint_samosir"
+  features:
+    - icon: "pizza"
+      text: "Pizza dengan<br>berbagai pilihan"
+    - icon: "service"
+      text: "Pelayanan<br>ramah dan cepat"
+    - icon: "view"
+      text: "View danau<br>Toba"
+    - icon: "camera"
+      text: "Spot foto<br>instagramable"
