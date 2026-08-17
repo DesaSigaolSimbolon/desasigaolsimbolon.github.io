@@ -1,0 +1,104 @@
+---
+layout: default
+title: "Penginapan — Desa Sigaol Simbolon"
+permalink: /accommodation.html
+---
+
+<section class="accommodation" id="penginapan">
+  <div class="container">
+    <header class="section-heading">
+      <p class="eyebrow eyebrow-center exo-bold">STAY EXPERIENCE</p>
+
+      <h1 class="section-title atkinson-hyperlegible-bold">PENGINAPAN</h1>
+
+      <p class="section-subtitle inria-serif-regular">
+        Nikmati penginapan yang nyaman dengan pilihan paket yang sesuai untuk
+        liburan bersama keluarga maupun teman-teman
+      </p>
+    </header>
+
+    <div class="accommodation-list">
+      {% for place in site.data.accommodation %}
+
+      <article class="accommodation-card">
+        <!-- Slideshow -->
+        <div
+          class="accommodation-slideshow"
+          data-slideshow="{{ place.slug }}"
+          data-image-count="{{ place.image_count }}"
+        >
+          <div class="accommodation-slides">
+            <!-- Images inserted by JavaScript -->
+          </div>
+
+          <div class="accommodation-dots" aria-hidden="true">
+            <!-- Dots inserted by JavaScript -->
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="accommodation-content">
+          <span class="accommodation-type lora-bold">
+            <img
+              src="{{ '/assets/images/icons/villa-type.svg' | relative_url }}"
+              alt="Villa"
+              aria-hidden="true"
+            />
+            {{ place.type }}
+          </span>
+
+          <h2 class="accommodation-title lora-bold">{{ place.name }}</h2>
+
+          <p class="accommodation-description inria-serif-regular">
+            {{ place.description }}
+          </p>
+
+          <div class="accommodation-features">
+            {% for feature in place.features %}
+
+            <div class="accommodation-feature">
+              <span class="accommodation-feature-icon">
+                <img
+                  src="{{ '/assets/images/icons/' | append: feature.icon | append: '.svg' | relative_url }}"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </span>
+
+              <span class="accommodation-feature-text inria-serif-regular">
+                {{ feature.text }}
+              </span>
+            </div>
+
+            {% endfor %}
+          </div>
+
+          <div class="accommodation-footer">
+            <a
+              href="{{ 'https://www.instagram.com/' | append: place.social }}"
+              class="accommodation-detail-button arimo-regular"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="{{ '/assets/images/icons/instagram.svg' | relative_url }}"
+                alt="Instagram"
+                aria-hidden="true"
+              />
+
+              Lihat Detail
+
+              <strong aria-hidden="true">→</strong>
+            </a>
+
+            <span class="accommodation-social arimo-regular">
+              {{ '@' | append: place.social }}
+            </span>
+          </div>
+        </div>
+      </article>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>

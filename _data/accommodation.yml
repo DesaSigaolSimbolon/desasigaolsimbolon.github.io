@@ -1,0 +1,75 @@
+- name: "HOPEVILLA 1"
+  slug: "hopevilla-1"
+  type: "VILLA"
+
+  description: >
+    Hunian nyaman dengan suasana tenang, cocok untuk menikmati waktu bersama
+    keluarga maupun orang terdekat
+
+  image_count: 4
+
+  features:
+    - icon: "villa"
+      text: "Modern Villa"
+
+    - icon: "pool"
+      text: "Private Pool"
+
+    - icon: "holbung"
+      text: "Near to Holbung"
+
+    - icon: "location"
+      text: "Strategic location"
+
+  social: "hopevillasamosir"
+
+- name: "HOPEVILLA 2"
+  slug: "hopevilla-2"
+  type: "VILLA"
+
+  description: >
+    Nikmati pengalaman menginap yang lebih privat
+    dengan fasilitas kolam renang pribadi dan suasana yang cocok
+    untuk quality time bersama orang terdekat
+
+  image_count: 7
+
+  features:
+    - icon: "villa"
+      text: "Modern Villa"
+
+    - icon: "pool"
+      text: "Private Pool"
+
+    - icon: "wooden-house"
+      text: "Glamping Kayu"
+
+    - icon: "best-view"
+      text: "Best View"
+
+  social: "hopevillasamosir"
+
+- name: "PENGINAPAN SAMPEAN"
+  slug: "penginapan-sampean"
+  type: "HOMESTAY"
+
+  description: >
+    Pilihan penginapan yang nyaman untuk beristirahat dan
+    melengkapi perjalanan Anda di Desa Sigaol Simbolon
+
+  image_count: 4
+
+  features:
+    - icon: "nature"
+      text: "Dekat dengan alam"
+
+    - icon: "best-view"
+      text: "Best View"
+
+    - icon: "bed"
+      text: "Nyaman & Tenang"
+
+    - icon: "holiday"
+      text: "Cocok untuk liburan"
+
+  social: "penginapansampean"
