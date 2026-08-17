@@ -1,3 +1,4 @@
+// Animate destination cards on scroll
 document.addEventListener("DOMContentLoaded", function () {
   var cards = document.querySelectorAll(".destination-card");
   if ("IntersectionObserver" in window) {
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// Toggle navigation menu
 const navToggle = document.querySelector(".nav-toggle");
 const siteHeader = document.querySelector(".site-header");
 
@@ -38,6 +40,7 @@ if (navToggle && siteHeader) {
   });
 }
 
+// Change header style on scroll
 const header = document.querySelector(".site-header");
 
 window.addEventListener("scroll", () => {
@@ -47,3 +50,27 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
+
+// Highlight active section in navigation
+const navLinks = document.querySelectorAll(".site-nav a[data-section]");
+const sections = document.querySelectorAll("section[id]");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.dataset.section === entry.target.id,
+          );
+        });
+      }
+    });
+  },
+  {
+    rootMargin: "-30% 0px -60% 0px",
+  },
+);
+
+sections.forEach((section) => observer.observe(section));

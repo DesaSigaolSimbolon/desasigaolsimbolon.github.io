@@ -47,36 +47,41 @@
 
         <nav class="site-nav" id="site-navigation" aria-label="Navigasi utama">
           <a
-            href="{{ '/' | relative_url }}"
-            class="{% if page.url == '/' %}active{% endif %} open-sans-bold"
+            href="{{ '/' | relative_url }}#beranda"
+            data-section="beranda"
+            class="open-sans-bold"
           >
             Beranda
           </a>
 
           <a
             href="{{ '/' | relative_url }}#destinasi"
-            class="{% if page.url == '/wisata.html' %}active{% endif %} open-sans-bold"
+            data-section="destinasi"
+            class="open-sans-bold"
           >
             Wisata
           </a>
 
           <a
-            href="{{ '/penginapan.html' | relative_url }}"
-            class="{% if page.url == '/penginapan.html' %}active{% endif %} open-sans-bold"
+            href="{{ '/accommodation.html' | relative_url }}"
+            data-section="penginapan"
+            class="open-sans-bold"
           >
             Penginapan
           </a>
 
           <a
-            href="{{ '/culinary.html' | relative_url }}"
-            class="{% if page.url == '/culinary.html' %}active{% endif %} open-sans-bold"
+            href="{{ '/culinary.html' | relative_url }}#kuliner"
+            data-section="kuliner"
+            class="open-sans-bold"
           >
             Kuliner
           </a>
 
           <a
-            href="{{ '/galeri.html' | relative_url }}"
-            class="{% if page.url == '/galeri.html' %}active{% endif %} open-sans-bold"
+            href="{{ '/gallery.html' | relative_url }}#galeri"
+            data-section="galeri"
+            class="open-sans-bold"
           >
             Galeri
           </a>
