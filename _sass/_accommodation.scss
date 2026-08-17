@@ -24,7 +24,7 @@
   overflow: hidden;
   border-radius: $radius-lg;
 
-  background: #f5f9fd;
+  background: #f7fbff;
 }
 
 /* ---------- Slideshow ---------- */
@@ -122,7 +122,7 @@
 
   border-radius: 999px;
 
-  background: #c7def1;
+  background: #c4daec;
 
   color: $navy;
 
@@ -156,7 +156,7 @@
   font-size: 17px;
   line-height: 1.55;
 
-  color: #666;
+  color: #505050;
 }
 
 /* ---------- Features ---------- */
@@ -182,9 +182,9 @@
 
   border-radius: 999px;
 
-  background: #c7def1;
+  background: #c4daec;
 
-  color: #174c78;
+  color: $navy;
 
   font-size: 14px;
 }
@@ -230,7 +230,7 @@
 
   border-radius: 999px;
 
-  background: #073f72;
+  background: $navy;
   color: white;
 
   text-decoration: none;
@@ -260,7 +260,7 @@
 }
 
 .accommodation-social {
-  color: #0b477c;
+  color: $navy;
 
   font-size: 13px;
 
